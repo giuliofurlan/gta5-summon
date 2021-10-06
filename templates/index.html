@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<h1>Steering</h1>
+<p>Drag the slider to display the current value.</p>
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="32767" value="16383" class="slider" id="steer">
+</div>
+<h1>Throttle</h1>
+<div class="slidecontainer">
+  <input type="range" min="0" max="32767" value="16383" class="slider" id="throttle">
+</div>
+<h1>Brake</h1>
+<div class="slidecontainer">
+  <input type="range" min="0" max="32767" value="16383" class="slider" id="brake">
+</div>
+<img src="{{ url_for('video_feed') }}" width="100%">
+
+<script>
+var steerSlider = document.getElementById("steer");
+var throttleSlidwer = document.getElementById("throttle");
+var brakeSlider = document.getElementById("brake");
+
+steerSlider.oninput = function() {
+    var s = this.value;
+    $.post( "http://192.168.1.227:5000/steer", {
+        javascript_data: s
+    });
+}
+
+
+throttleSlidwer.oninput = function() {
+    var s = this.value;
+    $.post( "http://192.168.1.227:5000/throttle", {
+        javascript_data: s
+    });
+}
+
+
+brakeSlider.oninput = function() {
+    var s = this.value;
+    $.post( "http://192.168.1.227:5000/brake", {
+        javascript_data: s
+    });
+}
+
+
+
+
+
+function throttle(){
+  $.post( "http://192.168.1.227:5000/throttle")
+}
+
+function stop(){
+  $.post( "http://192.168.1.227:5000/brake")
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
