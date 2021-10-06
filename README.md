@@ -20,4 +20,4 @@ control gta5 cars with the web
 * server not reachable, change "app.run(host='127.0.0.1')" in server.py with your machine ip
  
 ## screenshots
-![Screenshot](screen1.png)
+![Screenshot](../master/screenshots/screen1.png)
