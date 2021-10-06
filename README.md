@@ -18,6 +18,7 @@ useful project for learning new concepts such as virtualized joystick controls a
 * hard to control
 * x360ce gives errors, in that case just delete x360ce.ini and restart it
 * server not reachable, change "app.run(host='127.0.0.1')" in server.py with your machine ip
+* if you are using any scaling options in Windows, video streaming will be buggy!
  
 ## screenshots
 ![Screenshot](https://github.com/giuliofurlan/gta5-summon/blob/main/screenshots/screen1.PNG)
