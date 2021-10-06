@@ -1,6 +1,6 @@
 # gta5-summon
 control gta5 cars with the web
-
+useful project for learning new concepts such as virtualized joystick controls and video streaming
 ## requirements
 * [vJoy](https://sourceforge.net/projects/vjoystick/)
 * [x360ce](https://www.x360ce.com/files/x360ce_x64.zip)
@@ -13,7 +13,7 @@ control gta5 cars with the web
 * start server.py and open the game
 * go to http://"your server ip":5000
   
-##problems
+## problems
 * only one client can see the video feed for now
 * hard to control
 * x360ce gives errors, in that case just delete x360ce.ini and restart it
@@ -21,3 +21,5 @@ control gta5 cars with the web
  
 ## screenshots
 ![Screenshot](https://github.com/giuliofurlan/gta5-summon/blob/main/screenshots/screen1.PNG)
+![Screenshot](https://github.com/giuliofurlan/gta5-summon/blob/main/screenshots/screen2.PNG)
+![Screenshot](https://github.com/giuliofurlan/gta5-summon/blob/main/screenshots/screen3.PNG)
