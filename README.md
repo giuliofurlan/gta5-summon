@@ -9,7 +9,7 @@ control gta5 cars with the web
 ##instructions
 * install vJoy
 * copy x360ce_x64.exe into gta5 installation folder and open it
-* install the requirements with pip install requirements.txt 
+* install the requirements with pip install -r requirements.txt 
 * start server.py and open the game
 * go to <your server ip>:5000
   
